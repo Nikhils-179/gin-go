@@ -10,6 +10,6 @@ Follow the below steps:
 5. Create repository // Or simply Clone the repo
 
 
-Br,
+Br
 Nikhil Shrivastava 
 SE
