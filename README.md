@@ -9,6 +9,4 @@ Follow the below steps:
 4. initialize dependency management run {go mod .}
 5. Create repository // Or simply Clone the repo
 
-
-Br
-Nikhil
+Happy Development! :)
