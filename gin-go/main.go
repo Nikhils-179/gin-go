@@ -9,10 +9,12 @@ import (
 type UserController struct{}
 
 //Creating Controller and Handler
-func (uc *UserController) GetUserInfo(c *gin.Context){
-	userId := c.Param("id")
+func (uc *UserController) GetUserInfo() gin.HandleFunc{
+	return func(c *gin.Context){
+		userId := c.Param("id")
 
-	c.JSON(200,gin.H{"id": userId,"name":"John Cena","email":"J@gmail.com"})
+		c.JSON(200,gin.H{"id": userId,"name":"John Cena","email":"J@gmail.com"})
+		}
 }
 func LoggerMiddleWare() gin.HandlerFunc {
 	return func(c *gin.Context) {
@@ -40,7 +42,7 @@ func main() {
 
 	userController := &UserController{}
 
-	router.GET("/users/:id",userController.GetUserInfo)
+	router.GET("/users/:id",userController.GetUserInfo())
 
 	//Middleware
 	router.Use(LoggerMiddleWare())
