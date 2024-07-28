@@ -5,7 +5,7 @@ Follow the below steps:
 
 1. install go binaries in the system
 2. Create a go repository
-3. Set Path to the created repository (No need to set after go1.11)
+3. Set Path to the created repository (No need to set after go 1.18)
 4. initialize dependency management run {go mod .}
 5. Create repository // Or simply Clone the repo
 
