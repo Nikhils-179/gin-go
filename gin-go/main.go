@@ -9,11 +9,12 @@ import (
 type UserController struct{}
 
 //Creating Controller and Handler
-func (uc *UserController) GetUserInfo() gin.HandleFunc{
+func (uc *UserController) GetUserInfo() gin.HandlerFunc{
 	return func(c *gin.Context){
 		userId := c.Param("id")
+		username := c.Param("name")
 
-		c.JSON(200,gin.H{"id": userId,"name":"John Cena","email":"J@gmail.com"})
+		c.JSON(200,gin.H{"id": userId,"name": username,"email":"J@gmail.com"})
 		}
 }
 func LoggerMiddleWare() gin.HandlerFunc {
